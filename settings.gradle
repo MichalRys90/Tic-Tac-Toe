@@ -1,1 +1,3 @@
 rootProject.name = 'Tic-tac-toe'
+include 'TicTacToe'
+
