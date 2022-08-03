@@ -1,15 +1,17 @@
-package com.kodilla.game;
+package com.kodilla.bigGame;
 
+import java.text.DecimalFormat;
 import java.util.Arrays;
 
-import static com.kodilla.moves.WhoFirst.whoFirst;
-import static com.kodilla.moves.WhoSecond.whoSec;
+import static com.kodilla.moves.WhoFirstBig.whoFirstBig;
+import static com.kodilla.moves.WhoSecondBig.whoSecBig;
 
 public class LogicForBigGame {
 
     public static String[] bigBoard;
 
     public static String getBigLogic() {
+        DecimalFormat format = new DecimalFormat("000");
         int b;
         for (int i = 0; i < 42; i++) {
             StringBuffer s = new StringBuffer();
@@ -307,14 +309,14 @@ public class LogicForBigGame {
                     b -= 9;
                 }
             }
-            if (s.toString().contains("OOOOO")) {
-                return whoFirst;
-            } else if (s.toString().contains("XXXXX")) {
-                return whoSec;
+            if (s.toString().contains(" O  O  O  O  O ")) {
+                return whoFirstBig;
+            } else if (s.toString().contains(" X  X  X  X  X ")) {
+                return whoSecBig;
             }
         }
         for (int i = 0; i < 100; i++) {
-            if (Arrays.asList(bigBoard).contains(String.valueOf(i + 1))) {
+            if (Arrays.asList(bigBoard).contains(format.format(i+1))) {
                 break;
             } else if (i == 99) {
                 return "draw";

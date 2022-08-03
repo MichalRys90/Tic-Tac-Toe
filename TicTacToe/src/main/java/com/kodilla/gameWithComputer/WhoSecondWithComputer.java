@@ -8,12 +8,11 @@ public class WhoSecondWithComputer {
 
     public static String whoSecWithComputer;
 
-    public String whoSecondWithComputer() {
+    public void whoSecondWithComputer() {
         if (whoFirstWithComputer.equals(playerOneName)) {
             whoSecWithComputer = computer;
         } else {
             whoSecWithComputer = playerOneName;
         }
-        return whoSecWithComputer;
     }
 }

@@ -6,8 +6,7 @@ public class PlayerTwoName {
     public static String playerTwoName;
     Scanner scanner = new Scanner(System.in);
 
-    public String getPlayerTwoName() {
+    public void getPlayerTwoName() {
         playerTwoName = scanner.nextLine();
-        return playerTwoName;
     }
 }

@@ -66,7 +66,7 @@ public class GamePlayerVsComputer {
                         System.out.println("Space taken, choose an empty space.");
                     }
                 } catch (ArrayIndexOutOfBoundsException e) {
-                    System.out.println(e);
+                    System.out.println("Bad choice");
                 }
             } else {
                 int a = computerTurn.getRandom();

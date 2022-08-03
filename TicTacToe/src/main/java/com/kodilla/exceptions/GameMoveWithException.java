@@ -28,7 +28,7 @@ public class GameMoveWithException {
         } catch (InputMismatchException d) {
             System.out.println("You have to choose integer \n" + d);
         } catch (BadChoiceException e) {
-            System.out.println(e);
+            System.out.println("Bad Choice");
         }
         return 0;
     }

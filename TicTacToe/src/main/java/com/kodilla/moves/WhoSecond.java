@@ -8,12 +8,11 @@ public class WhoSecond {
 
     public static String whoSec;
 
-    public String whoSecond() {
+    public void whoSecond() {
         if (whoFirst.equals(playerOneName)) {
             whoSec = playerTwoName;
         } else {
             whoSec = playerOneName;
         }
-        return whoSec;
     }
 }

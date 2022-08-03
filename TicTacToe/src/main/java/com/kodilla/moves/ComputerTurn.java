@@ -8,8 +8,6 @@ public class ComputerTurn {
 
     public int getRandom() {
 
-        int n = random.nextInt(9) + 1;
-
-        return n;
+        return random.nextInt(9) + 1;
     }
 }

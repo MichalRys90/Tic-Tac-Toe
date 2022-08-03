@@ -1,6 +1,6 @@
-package com.kodilla.game;
+package com.kodilla.bigGame;
 
-import static com.kodilla.game.LogicForBigGame.bigBoard;
+import static com.kodilla.bigGame.LogicForBigGame.bigBoard;
 
 public class BigInterface {
 
