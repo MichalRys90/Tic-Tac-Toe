@@ -1,6 +1,5 @@
 package com.kodilla.graphics;
 
-import com.kodilla.game.LogicFX;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;

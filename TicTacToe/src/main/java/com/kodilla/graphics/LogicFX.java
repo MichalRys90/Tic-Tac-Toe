@@ -1,4 +1,4 @@
-package com.kodilla.game;
+package com.kodilla.graphics;
 
 import com.kodilla.graphics.InfoCenter;
 import com.kodilla.graphics.InterfejsFX;

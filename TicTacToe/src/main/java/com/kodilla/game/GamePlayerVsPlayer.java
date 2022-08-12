@@ -83,7 +83,7 @@ public class GamePlayerVsPlayer {
         }
         if (getLogic().equals(playerOneName)) {
             playerOneScore++;
-        } else {
+        } else if (getLogic().equals(playerTwoName)) {
             playerTwoScore++;
         }
         System.out.println("the current score of a two-player game is: " + playerOneName + " " + playerOneScore + " "

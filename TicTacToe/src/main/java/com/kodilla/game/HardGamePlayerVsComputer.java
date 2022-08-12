@@ -5,7 +5,7 @@ import com.kodilla.exceptions.GameMoveWithException;
 import com.kodilla.gameWithComputer.WhoFirstWithComputer;
 import com.kodilla.gameWithComputer.WhoSecondWithComputer;
 import com.kodilla.moves.ComputerMove;
-import com.kodilla.moves.ComputerTurn;
+import com.kodilla.moves.HardComputerTurn;
 import com.kodilla.moves.PlayerOneMoveWithComputer;
 import com.kodilla.names.PlayerOneName;
 
@@ -17,9 +17,9 @@ import static com.kodilla.gameWithComputer.LogicWithComputer.getLogicWithCompute
 import static com.kodilla.names.ComputerName.computer;
 import static com.kodilla.names.PlayerOneName.playerOneName;
 
-public class GamePlayerVsComputer {
+public class HardGamePlayerVsComputer {
 
-    public void gameWithComputer() {
+    public void hardGameWithComputer() {
         board = new String[9];
         for (int i = 0; i < board.length; i++) {
             board[i] = String.valueOf(i + 1);
@@ -29,7 +29,7 @@ public class GamePlayerVsComputer {
         WhoSecondWithComputer whoSecondWithComputer = new WhoSecondWithComputer();
         GameMoveWithException gameMoveWithException = new GameMoveWithException();
         MainMenu mainMenu = new MainMenu();
-        ComputerTurn computerTurn = new ComputerTurn();
+        HardComputerTurn hardComputerTurn = new HardComputerTurn();
         System.out.println("Enter the name of the first player");
         playerOneName1.getPlayerOneName();
         System.out.println("Welcome in tic-tac-toe game " + playerOneName + " and " + computer);
@@ -69,7 +69,7 @@ public class GamePlayerVsComputer {
                     System.out.println("Bad choice");
                 }
             } else {
-                int a = computerTurn.getRandom();
+                int a = hardComputerTurn.getHardRandom();
                 if (board[a - 1].equals(String.valueOf(a))) {
                     board[a - 1] = turn;
                     turn = playerOneM;
@@ -85,7 +85,7 @@ public class GamePlayerVsComputer {
         }
         if (getLogicWithComputer().equals(playerOneName)) {
             playerOneVsComputerScore++;
-        } else if (getLogicWithComputer().equals(computer)) {
+        } else if (getLogicWithComputer().equals(computer)){
             computerScore++;
         }
         System.out.println("the current score of the computer game is: " + playerOneName + " " +

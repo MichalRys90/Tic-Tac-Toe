@@ -3,6 +3,7 @@ package com.kodilla;
 import com.kodilla.game.GamePlayerVsComputer;
 import com.kodilla.game.GamePlayerVsPlayer;
 import com.kodilla.game.GamePlayerVsPlayerBig;
+import com.kodilla.game.HardGamePlayerVsComputer;
 
 import java.util.Scanner;
 
@@ -13,8 +14,10 @@ public class MainMenu {
         GamePlayerVsPlayer gamePlayerVsPlayer = new GamePlayerVsPlayer();
         GamePlayerVsComputer gamePlayerVsComputer = new GamePlayerVsComputer();
         GamePlayerVsPlayerBig gamePlayerVsPlayerBig = new GamePlayerVsPlayerBig();
+        HardGamePlayerVsComputer hardGamePlayerVsComputer = new HardGamePlayerVsComputer();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Choose game\n1: Play with friend\n2: Play with computer\n3: Big game with friend\n4: Exit");
+        System.out.println("Choose game\n1: Play with friend\n2: Play with computer\n3: Big game with friend" +
+                "\n4: Play with computer(HARD)\n5: Exit");
         int n = scanner.next().charAt(0);
         boolean isTrue = true;
         while (isTrue) {
@@ -31,7 +34,11 @@ public class MainMenu {
                     isTrue = false;
                     gamePlayerVsPlayerBig.gameBig();
                 }
-                case '4' -> isTrue = false;
+                case '4' -> {
+                    isTrue = false;
+                    hardGamePlayerVsComputer.hardGameWithComputer();;
+                }
+                case '5' -> isTrue = false;
                 default -> {
                     System.out.println("Not a defined operation, Exit");
                     isTrue = false;

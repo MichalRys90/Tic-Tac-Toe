@@ -7,7 +7,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 
-import static com.kodilla.game.LogicFX.*;
+import static com.kodilla.graphics.LogicFX.*;
 
 public class Tile {
 
@@ -28,7 +28,7 @@ public class Tile {
 
         label = new Label("");
         label.setAlignment(Pos.CENTER);
-        label.setFont(Font.font(24));
+        label.setFont(Font.font(25));
         pane.getChildren().add(label);
 
         pane.setOnMouseClicked(event -> {
