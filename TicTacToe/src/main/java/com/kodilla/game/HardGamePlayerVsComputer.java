@@ -1,6 +1,7 @@
 package com.kodilla.game;
 
 import com.kodilla.MainMenu;
+import com.kodilla.Rankings;
 import com.kodilla.exceptions.GameMoveWithException;
 import com.kodilla.gameWithComputer.WhoFirstWithComputer;
 import com.kodilla.gameWithComputer.WhoSecondWithComputer;
@@ -24,6 +25,7 @@ public class HardGamePlayerVsComputer {
         for (int i = 0; i < board.length; i++) {
             board[i] = String.valueOf(i + 1);
         }
+        Rankings rankings = new Rankings();
         PlayerOneName playerOneName1 = new PlayerOneName();
         WhoFirstWithComputer whoFirstWithComputer = new WhoFirstWithComputer();
         WhoSecondWithComputer whoSecondWithComputer = new WhoSecondWithComputer();
@@ -40,6 +42,7 @@ public class HardGamePlayerVsComputer {
         ComputerMove computerMove = new ComputerMove();
         String computerM = computerMove.getComputerMove();
         String turn;
+        rankings.loadMapHard();
         interfejs();
 
         if (first.equals(playerOneName)) {
@@ -77,6 +80,7 @@ public class HardGamePlayerVsComputer {
             }
             interfejs();
             win = getLogicWithComputer();
+            rankings.saveMapHard();
         }
         if (getLogicWithComputer().equals("draw")) {
             System.out.println("Its a draw!");

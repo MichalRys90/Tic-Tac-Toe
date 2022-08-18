@@ -1,8 +1,5 @@
 package com.kodilla.graphics;
 
-import com.kodilla.graphics.InfoCenter;
-import com.kodilla.graphics.InterfejsFX;
-import com.kodilla.graphics.Tile;
 import javafx.scene.layout.StackPane;
 
 import static com.kodilla.graphics.Tile.isEngGame;
@@ -10,7 +7,7 @@ import static com.kodilla.graphics.Tile.isEngGame;
 public class LogicFX {
 
     private StackPane pane;
-    private static Tile[][] tiles = new Tile[3][3];
+    public static Tile[][] tiles = new Tile[3][3];
     private static InfoCenter infoCenter;
     private static char playerFxMove = 'O';
 

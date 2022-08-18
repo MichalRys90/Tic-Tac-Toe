@@ -1,6 +1,7 @@
 package com.kodilla.game;
 
 import com.kodilla.MainMenu;
+import com.kodilla.Rankings;
 import com.kodilla.exceptions.GameMoveWithException;
 import com.kodilla.moves.PlayerOneMove;
 import com.kodilla.moves.PlayerTwoMove;
@@ -24,6 +25,7 @@ public class GamePlayerVsPlayer {
         for (int i = 0; i < board.length; i++) {
             board[i] = String.valueOf(i + 1);
         }
+        Rankings rankings = new Rankings();
         PlayerOneName playerOneName1 = new PlayerOneName();
         PlayerTwoName playerTwoName1 = new PlayerTwoName();
         MainMenu mainMenu = new MainMenu();
@@ -35,6 +37,7 @@ public class GamePlayerVsPlayer {
         System.out.println("Enter the name of the second player");
         playerTwoName1.getPlayerTwoName();
         System.out.println("Welcome in tic-tac-toe game " + playerOneName + " and " + playerTwoName);
+        rankings.loadMapPvP();
         interfejs();
         String first = whoFirst.getWhoFirst();
         whoSecond.whoSecond();
@@ -68,6 +71,7 @@ public class GamePlayerVsPlayer {
                     }
                     interfejs();
                     win = getLogic();
+                    rankings.saveMapPvP();
                 } else {
                     System.out.println("Space taken, choose an empty space.");
                 }

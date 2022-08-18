@@ -1,6 +1,7 @@
 package com.kodilla.game;
 
 import com.kodilla.MainMenu;
+import com.kodilla.Rankings;
 import com.kodilla.exceptions.GameMoveWithExceptionBig;
 import com.kodilla.moves.PlayerOneMoveBig;
 import com.kodilla.moves.PlayerTwoMoveBig;
@@ -27,6 +28,7 @@ public class GamePlayerVsPlayerBig {
         for (int i = 0; i < bigBoard.length; i++) {
             bigBoard[i] = (format.format(i + 1));
         }
+        Rankings rankings = new Rankings();
         PlayerOneName playerOneName1 = new PlayerOneName();
         PlayerTwoName playerTwoName1 = new PlayerTwoName();
         MainMenu mainMenu = new MainMenu();
@@ -38,6 +40,7 @@ public class GamePlayerVsPlayerBig {
         System.out.println("Enter the name of the second player");
         playerTwoName1.getPlayerTwoName();
         System.out.println("Welcome in tic-tac-toe game " + playerOneName + " and " + playerTwoName);
+        rankings.loadMapBig();
         bigInterface();
         String first = whoFirst.getWhoFirstBig();
         whoSecond.whoSecondBig();
@@ -71,6 +74,7 @@ public class GamePlayerVsPlayerBig {
                     }
                     bigInterface();
                     win = getBigLogic();
+                    rankings.saveMapBig();
                 } else {
                     System.out.println("Space taken, choose an empty space.");
                 }

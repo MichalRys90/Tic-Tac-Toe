@@ -76,6 +76,8 @@ public class HardComputerTurn {
             return 5;
         } else if ((board[2].equals("O")) && (board[6].equals("O")) && (!board[4].equals("X"))) {
             return 5;
+        } else if ((board[4].equals("O")) && (board[6].equals("O")) && (!board[2].equals("X"))) {
+            return 3;
         }
         return null;
     }
@@ -127,6 +129,8 @@ public class HardComputerTurn {
             return 5;
         } else if ((board[2].equals("X")) && (board[6].equals("X")) && (!board[4].equals("O"))) {
             return 5;
+        } else if ((board[4].equals("X")) && (board[6].equals("X")) && (!board[2].equals("O"))) {
+            return 3;
         }
         return null;
     }
